@@ -22,15 +22,15 @@ def joining(lst):
     join_str = ' '.join(lst)
     return join_str
 
-# parser = argparse.ArgumentParser()
-# parser.add_argument('--testconf', help='Enter the config file for the test', required=True)
-# args = parser.parse_args()
-# yaml_path = args.testconf
+parser = argparse.ArgumentParser()
+parser.add_argument('--testconf', help='Enter the config file for the test', required=True)
+args = parser.parse_args()
+yaml_path = args.testconf
 
-# # Open the YAML file
-# with open(yaml_path, 'r') as file:
-#     # Load the YAML content into a Python dictionary
-#     config = yaml.safe_load(file)
+# Open the YAML file
+with open(yaml_path, 'r') as file:
+    # Load the YAML content into a Python dictionary
+    config = yaml.safe_load(file)
 
 # Folder containing the files to be concatenated
 # script_path = r"/home/asyaturhal/desktop/ai/last_developed/ai8x-training/scripts_test"
@@ -70,7 +70,7 @@ def dev_scripts(script_pth, output_file_pth):
                     if log_data == "FaceID":
                         continue
 
-                    temp[i+1] = "15"
+                    temp[i+1] = str(config[log_data][log_model]["epoch"])
 
                     if '--deterministic' not in temp:
                         temp.insert(-2, '--deterministic')
@@ -78,14 +78,12 @@ def dev_scripts(script_pth, output_file_pth):
                     temp.insert(-1, '--name ' + log_name)
 
                     data_name = temp[k+1]
-
-                    # temp.insert(-1, '--data ' + path_data)
+                    if data_name in config and "datapath" in config[data_name]:
+                        path_data = config[log_data]["datapath"]
+                        temp.insert(-1, '--data ' + path_data)
 
                     temp.append("\n")
                     contents = joining(temp)
-                    # Replace the number in the "--epochs" script
-
-                    # Write the contents to the output file
                     output_file.write(contents)
 
 
@@ -132,12 +130,12 @@ def dev_checkout():
             print("-----Asya---------")
             print(current_dir)
             
-#             source_path = "/home/asyaturhal/actions-runner/_work/ai8x-training/ai8x-training/logs/"
-#             destination_path = (
-#                 "/home/asyaturhal/desktop/ai/last_developed/dev_logs/"
-#                 + datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-#             )
-#             subprocess.run(['mv', source_path, destination_path], check=True)
+            source_path = "/home/asyaturhal/actions-runner/_work/ai8x-training/ai8x-training/logs/"
+            destination_path = (
+                "/home/asyaturhal/desktop/ai/last_developed/dev_logs/"
+                + datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+            )
+            subprocess.run(['mv', source_path, destination_path], check=True)
 
 
 dev_checkout() 
