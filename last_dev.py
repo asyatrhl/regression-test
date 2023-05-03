@@ -120,7 +120,7 @@ def dev_checkout():
                 "bash /home/asyaturhal/desktop/ai/"
                 "last_developed/dev_scripts/last_dev_train.sh"
             )
-            # subprocess.run(cmd_command, shell=True, check=True)
+            subprocess.run(cmd_command, shell=True, check=True)
 
             path_command = ("cd  /home/asyaturhal/desktop/ai/last_developed/last_dev_source/")
             
