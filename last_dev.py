@@ -66,6 +66,10 @@ def dev_scripts(script_pth, output_file_pth):
                     log_model = temp[j+1]
                     log_data = temp[k+1]
 
+                    if log_model == "ai87imageneteffnetv2" :
+                        num = temp.index("--batch-size")
+                        temp[num+1] = "128"
+                        
                     log_name = temp[j+1] + '-' + temp[k+1]
                     log_file_names.append(filename[:-3])
 
@@ -120,18 +124,11 @@ def dev_checkout():
                 "bash /home/asyaturhal/desktop/ai/"
                 "last_developed/dev_scripts/last_dev_train.sh"
             )
-            subprocess.run(cmd_command, shell=True, check=True)
+           # subprocess.run(cmd_command, shell=True, check=True)
 
             path_command = ("cd  /home/asyaturhal/desktop/ai/last_developed/last_dev_source/")
-            
             subprocess.run(path_command, shell=True, check=True)
-            
-            result = subprocess.run(['pwd'], stdout=subprocess.PIPE)
-            current_dir = result.stdout.decode('utf-8').strip()
-            
-            print("-----Asya---------")
-            print(current_dir)
-            
+
             source_path = "/home/asyaturhal/actions-runner/_work/ai8x-training/ai8x-training/logs/"
             destination_path = (
                 "/home/asyaturhal/desktop/ai/last_developed/dev_logs/"
