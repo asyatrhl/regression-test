@@ -2,25 +2,25 @@
 Onnx_Status: True
 
 AISegment_352:
-  datapath: "/data_ssd/"
+  datapath: "/data_ssd"
   ai85unetlarge:
     threshold: 0
     epoch: 5
 
 CamVid_s352_c3:
-  datapath: "/data_ssd/"
+  datapath: "/data_ssd"
   ai85unetlarge:
     threshold: 0
     epoch: 5
 
 cats_vs_dogs:
-  datapath: "/data_ssd/"
+  datapath: "/data_ssd"
   ai85cdnet:
     threshold: 0
     epoch: 5 
 
 CIFAR10:
-  datapath: "/data_ssd/"
+  datapath: "/data_ssd"
   ai85nascifarnet:
     threshold: 0
     epoch: 5
@@ -34,7 +34,7 @@ CIFAR10:
     epoch: 5
 
 CIFAR100:
-  datapath: "/data_ssd/"
+  datapath: "/data_ssd"
   ai85simplenet:
     threshold: 0
     epoch: 5
@@ -66,13 +66,13 @@ CIFAR100:
 #TO DO FACEID:
 
 ImageNet:
-  datapath: "/data_ssd/"
+  datapath: "/data_ssd"
   ai87imageneteffnetv2:
     threshold: 0
     epoch: 5
 
 KWS_20:
-  datapath: "/data_ssd/"
+  datapath: "/data_ssd"
   ai85kws20net:
     threshold: 0
     epoch: 5
@@ -90,7 +90,7 @@ KWS_20:
     epoch: 5
 
 MNIST:
-  datapath: "/data_ssd/"
+  datapath: "/data_ssd"
   ai85netextrasmall:
     threshold: 1500
     epoch: 5
@@ -100,6 +100,7 @@ MNIST:
     epoch: 5
 
 SVHN_74:
+  datapath: "/data_ssd"
   ai85tinierssd:
     threshold: -500
     epoch: 5
