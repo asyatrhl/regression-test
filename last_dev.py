@@ -79,7 +79,7 @@ def dev_scripts(script_pth, output_file_pth):
                     temp[i+1] = str(config[log_data][log_model]["epoch"])
 
                     if '--deterministic' not in temp:
-                        temp.insert(-2, '--deterministic')
+                        temp.insert(-1, '--deterministic')
 
                     temp.insert(-1, '--name ' + log_name)
 
