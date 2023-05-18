@@ -75,6 +75,8 @@ def dev_scripts(script_pth, output_file_pth):
 
                     if log_data == "FaceID":
                         continue
+                    if log_data == "VGGFace2_FaceDetection":
+                        continue
 
                     temp[i+1] = str(config[log_data][log_model]["epoch"])
 
