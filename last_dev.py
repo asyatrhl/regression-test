@@ -63,6 +63,12 @@ def dev_scripts(script_pth, output_file_pth):
                     j = temp.index('--model')
                     k = temp.index('--dataset')
 
+                    if '--qat-policy' in temp:
+                        x = temp.index('--qat-policy')
+                        temp[x+1] = "policies/qat_policy.yaml"
+                    else:
+                        temp.insert(-1, ' --qat-policy policies/qat_policy.yaml')
+
                     log_model = temp[j+1]
                     log_data = temp[k+1]
 
