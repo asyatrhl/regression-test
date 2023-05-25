@@ -4,103 +4,103 @@ Onnx_Status: True
 AISegment_352:
   datapath: "/data_ssd"
   ai85unetlarge:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
 CamVid_s352_c3:
   datapath: "/data_ssd"
   ai85unetlarge:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
 cats_vs_dogs:
   datapath: "/data_ssd"
   ai85cdnet:
-    threshold: 0
-    epoch: 25 
+    threshold: -5
+    epoch: 15 
 
 CIFAR10:
   datapath: "/data_ssd"
   ai85nascifarnet:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai85net6:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai85squeezenet:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
 CIFAR100:
   datapath: "/data_ssd"
   ai85simplenet:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai85nascifarnet:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai87effnetv2:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai87netmobilenetv2cifar100_m0_5:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai87netmobilenetv2cifar100_m0_75:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai85ressimplenet:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai85simplenetwide2x:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
 #TO DO FACEID:
 
 ImageNet:
   datapath: "/data_ssd"
   ai87imageneteffnetv2:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 13
 
 KWS_20:
   datapath: "/data_ssd"
   ai85kws20net:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai85kws20netv2:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai85kws20netv3:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
   ai87kws20netv3:
-    threshold: 0
-    epoch: 25
+    threshold: -5
+    epoch: 15
 
 MNIST:
   datapath: "/data_ssd"
   ai85netextrasmall:
     threshold: 1500
-    epoch: 25
+    epoch: 15
 
   ai85net5:
     threshold: -500
-    epoch: 25
+    epoch: 15
 
 SVHN_74:
   datapath: "/data_ssd"
   ai85tinierssd:
     threshold: -500
-    epoch: 25
+    epoch: 15
