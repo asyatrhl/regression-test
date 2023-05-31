@@ -110,3 +110,9 @@ PascalVOC_2007_2012_256_320_augmented:
   ai87fpndetector:
     threshold: -500
     epoch: 15
+    
+Kinetics400:
+  datapath: "/data_ssd"
+  ai85actiontcn:
+    threshold: -500
+    epoch: 15
